@@ -18,14 +18,43 @@ namespace OOPExercise
         { 
             get { return age; } 
             set
-            { if (age > 0)
+            {
+                if (Age > 0)
                 { age = Age; }
-                else 
-                { Console.WriteLine("Age have to be greater than 0."); }
+                else
+                { Console.WriteLine("Ålder måste vara större än 0."); }
             } 
         }
-        public string FName { get; set; }
-        public string LName { get; set; }
+        public string FName
+        {
+            get { return fName; }
+            set 
+            { 
+                if (String.IsNullOrEmpty(FName) || FName.Length < 2 || FName.Length > 10 )
+                {
+                    Console.WriteLine("Förnamnet är obligatoriskt, måste vara längre än 2 tecken eller kortare än 10 tecken.");
+                }
+                else
+                {
+                    fName = FName;
+                }
+            }
+        }
+        public string LName
+        {
+            get { return lName; }
+            set
+            {
+                if (String.IsNullOrEmpty(LName) || LName.Length < 3 || LName.Length > 15)
+                {
+                    Console.WriteLine("EFternamnet är obligatoriskt, måste vara längre än 3 tecken eller kortare än 15 tecken.");
+                }
+                else
+                {
+                    lName = LName;
+                }
+            }
+        }
         public int Height { get; set; }
         public int Weight { get; set; }
 
