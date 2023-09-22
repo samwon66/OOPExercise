@@ -10,9 +10,20 @@ namespace OOPExercise
     {
         public void SetAge(Person pers, int age)
         {
-            //bool validated = pers.Validate();
-            //if (validated) 
-            //    pers.Age = age; 
+            pers.Age = age;
         }
+
+        public Person CreatePerson(int age, string fname, string lname, double height, double weight)
+        {
+            Person person = new Person();
+            person.Age = age;
+            person.FName = fname;
+            person.LName = lname;
+            person.Height = height;
+            person.Weight = weight;
+
+            return person;
+        }
+
     }
 }
