@@ -6,11 +6,22 @@
         {
             try
             {
-                Person person = new Person(57, "Sammy", "Wong", 170, 68);
+                Person person = new Person();
+                person.Age = 45;
+                person.FName = "Ghost";
+                person.LName = "Long";
+                person.Height = 170;
+                person.Weight = 70;
+                bool isValid = person.Validate();
+                if (isValid)
+                {
+                    Console.WriteLine(person.ToString());
+                }
+                //Console.WriteLine(person.ToString());
             }
-            catch (Exception ex)
+            catch (ArgumentException ex)
             {
-                Console.WriteLine(ex.ToString());
+                Console.WriteLine(ex.Message);
             }
 
             //Person person = new Person(0, "Sammy", "Wong", 170, 68);

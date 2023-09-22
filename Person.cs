@@ -8,46 +8,12 @@ namespace OOPExercise
 {
     public class Person
     {
-        private int age;
-        private string fName;
-        private string lName;
-        private int height;
-        private int weight;
-
-        public int Age 
-        { 
-            get { return age; } 
-            set { age = Age; }
-         }
-        public string FName
-        {
-            get { return fName; }
-            set { fName = FName; }
-        }
-        public string LName
-        {
-            get { return lName; }
-            set { lName = LName; }
-        }
-        public int Height
-        {
-            get { return height;}
-            set { height = Height;}
-        }
-        public int Weight
-        {
-            get { return weight;}
-            set { weight = Weight;}
-        }
-
-        public Person(int age, string fName, string lName, int height, int weight) 
-        {
-            Age = age;
-            FName = fName;
-            LName = lName;
-            Height = height;
-            Weight = weight;
-        }
+        public int Age { get; set; }
+        public string FName { get; set; }
+        public string LName { get; set; }
+        public int Height { get; set; }
+        public int Weight { get; set; }
+        
 
         //Method for validating properties and return a bool value.
         public bool Validate()
@@ -58,21 +24,17 @@ namespace OOPExercise
             {
                 throw new ArgumentException("Ålder måste vara större än 0.");
             }
-            if (!String.IsNullOrEmpty(FName))
-            {
-                if(FName.Length < 2 || FName.Length > 10)
-                {
-                    throw new ArgumentException("Förnamnet måste vara längre än 2 tecken och kortare än 10 tecken.");
-                }
-            }
-            if (!String.IsNullOrEmpty(LName)) 
+            else 
             { 
-                if (LName.Length < 3 || LName.Length > 15)
-                {
-                    throw new ArgumentException("Efternamnet måste vara längre än 3 och kortare än 15 tecken.");
-                }
+                return validated; 
             }
-            return validated;
+            
+        }
+
+        //Override ToString to print out all properties of the class.
+        public override string ToString()
+        {
+            return $"Förnamn: {FName}\nEfternamn: {LName}\nÅlder: {Age}\nLängd: {Height}\nVikt: {Weight}";
         }
 
 
