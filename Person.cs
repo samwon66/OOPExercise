@@ -9,54 +9,36 @@ namespace OOPExercise
     public class Person
     {
         private int age;
-        private string fName = String.Empty;
-        private string lName = String.Empty;
+        private string fName;
+        private string lName;
         private int height;
         private int weight;
 
         public int Age 
         { 
             get { return age; } 
-            set
-            {
-                if (Age > 0)
-                { age = Age; }
-                else
-                { Console.WriteLine("Ålder måste vara större än 0."); }
-            } 
-        }
+            set { age = Age; }
+         }
         public string FName
         {
             get { return fName; }
-            set 
-            { 
-                if (String.IsNullOrEmpty(FName) || FName.Length < 2 || FName.Length > 10 )
-                {
-                    Console.WriteLine("Förnamnet är obligatoriskt, måste vara längre än 2 tecken eller kortare än 10 tecken.");
-                }
-                else
-                {
-                    fName = FName;
-                }
-            }
+            set { fName = FName; }
         }
         public string LName
         {
             get { return lName; }
-            set
-            {
-                if (String.IsNullOrEmpty(LName) || LName.Length < 3 || LName.Length > 15)
-                {
-                    Console.WriteLine("EFternamnet är obligatoriskt, måste vara längre än 3 tecken eller kortare än 15 tecken.");
-                }
-                else
-                {
-                    lName = LName;
-                }
-            }
+            set { lName = LName; }
         }
-        public int Height { get; set; }
-        public int Weight { get; set; }
+        public int Height
+        {
+            get { return height;}
+            set { height = Height;}
+        }
+        public int Weight
+        {
+            get { return weight;}
+            set { weight = Weight;}
+        }
 
         public Person(int age, string fName, string lName, int height, int weight) 
         {
@@ -65,6 +47,32 @@ namespace OOPExercise
             LName = lName;
             Height = height;
             Weight = weight;
+        }
+
+        //Method for validating properties and return a bool value.
+        public bool Validate()
+        {
+            bool validated = true;
+
+            if (Age <= 0)
+            {
+                throw new ArgumentException("Ålder måste vara större än 0.");
+            }
+            if (!String.IsNullOrEmpty(FName))
+            {
+                if(FName.Length < 2 || FName.Length > 10)
+                {
+                    throw new ArgumentException("Förnamnet måste vara längre än 2 tecken och kortare än 10 tecken.");
+                }
+            }
+            if (!String.IsNullOrEmpty(LName)) 
+            { 
+                if (LName.Length < 3 || LName.Length > 15)
+                {
+                    throw new ArgumentException("Efternamnet måste vara längre än 3 och kortare än 15 tecken.");
+                }
+            }
+            return validated;
         }
 
 
