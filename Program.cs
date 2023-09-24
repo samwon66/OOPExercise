@@ -1,4 +1,6 @@
-﻿namespace OOPExercise
+﻿using OOPExercise.Errors;
+
+namespace OOPExercise
 {
     internal class Program
     {
@@ -34,9 +36,15 @@
 
             var numericError = new NumericInputError();
             var textError = new TextInputError();
+            var minError = new MinError();
+            var maxError = new MaxError();
+            var validError = new ValidError();
 
             errors.Add(numericError);
             errors.Add(textError);
+            errors.Add(minError);
+            errors.Add(maxError);
+            errors.Add(validError);
 
             foreach ( var error in errors ) 
             {

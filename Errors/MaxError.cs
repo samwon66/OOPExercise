@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOPExercise
+namespace OOPExercise.Errors
 {
-    internal class TextInputError : UserError
+    internal class MaxError : UserError
     {
         public override string UEMessage()
         {
-            return "You try to use a text input in a numeric only field. This fired an error!";
+            return "You have entered a number greater than 10. This fire an error!";
         }
     }
 }

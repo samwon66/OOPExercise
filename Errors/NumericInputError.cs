@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOPExercise
+namespace OOPExercise.Errors
 {
     internal class NumericInputError : UserError
     {
