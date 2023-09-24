@@ -8,6 +8,7 @@ namespace OOPExercise.Animals
 {
     internal abstract class Animal
     {
+        //Ett nytt attribut ska vara här om det ska gälla för alla som tillhör denna klass.
         public string Name { get; set; }
         public int Age { get; set; }
         public int Weight { get; set; }
