@@ -11,5 +11,10 @@ namespace OOPExercise.Animals.Birds
         public bool CanSwim { get; set; }
         public Swan() { }
 
+        public override string Stats()
+        {
+            return $"Name: {Name}, age: {Age}, weight: {Weight}, can fly: {CanFly}, can swim: {CanSwim}";
+        }
+
     }
 }

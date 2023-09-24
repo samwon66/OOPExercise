@@ -15,5 +15,10 @@ namespace OOPExercise.Animals
         {
             Console.WriteLine("The dog barks");
         }
+
+        public override string Stats()
+        {
+            return $"Name: {Name}, age: {Age}, weight: {Weight}, humanfriendly: {HumanFriendly}";
+        }
     }
 }

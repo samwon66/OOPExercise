@@ -14,5 +14,10 @@ namespace OOPExercise.Animals
         {
             Console.WriteLine("The wolf moans.");
         }
+
+        public override string Stats()
+        {
+            return $"Name: {Name}, age: {Age}, weight: {Weight}, is Dangerous: {IsDangerous}";
+        }
     }
 }

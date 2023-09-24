@@ -15,5 +15,10 @@ namespace OOPExercise.Animals
             Console.WriteLine("The worm sounds nothing.");
         }
 
+        public override string Stats()
+        {
+            return $"Name: {Name}, age: {Age}, weight: {Weight}, can dig: {CanDig}";
+        }
+
     }
 }

@@ -11,5 +11,10 @@ namespace OOPExercise.Animals.Birds
         public bool IsMigratory { get; set; }
         public Pelican() { }
 
+        public override string Stats()
+        {
+            return $"Name: {Name}, age: {Age}, weight: {Weight}, can fly: {CanFly}, is migratory: {IsMigratory}";
+        }
+
     }
 }

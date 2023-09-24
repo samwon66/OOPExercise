@@ -14,5 +14,10 @@ namespace OOPExercise.Animals
         {
             Console.WriteLine("The hedgehog purrs.");
         }
+
+        public override string Stats()
+        {
+            return $"Name: {Name}, age: {Age}, weight: {Weight}, number of spikes: {NrOfSpikes}";
+        }
     }
 }

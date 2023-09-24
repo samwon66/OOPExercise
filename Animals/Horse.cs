@@ -14,5 +14,10 @@ namespace OOPExercise.Animals
         {
             Console.WriteLine("The horse make a neigh.");
         }
+
+        public override string Stats()
+        {
+            return $"Name: {Name}, age: {Age}, weight: {Weight}, can be ridden: {CanRide}";
+        }
     }
 }

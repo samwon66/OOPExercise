@@ -12,5 +12,6 @@ namespace OOPExercise.Animals
         {
             Console.WriteLine("Wolfman can talk.");
         }
+
     }
 }
