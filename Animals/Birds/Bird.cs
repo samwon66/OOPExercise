@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOPExercise.Animals
+namespace OOPExercise.Animals.Birds
 {
     internal class Bird : Animal
     {
