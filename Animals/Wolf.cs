@@ -10,5 +10,9 @@ namespace OOPExercise.Animals
     {
         public bool IsDangerous { get; set; }
         public Wolf() { }
+        public override void DoSound()
+        {
+            Console.WriteLine("The wolf moans.");
+        }
     }
 }

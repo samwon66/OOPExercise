@@ -13,7 +13,10 @@ namespace OOPExercise.Animals
         public int Weight { get; set; }
         public Animal() { }
 
-        public void DoSound() { }
+        public virtual void DoSound() 
+        {
+            Console.WriteLine("That's how animal sounds.");
+        }
 
     }
 }

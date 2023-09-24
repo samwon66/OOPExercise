@@ -10,5 +10,10 @@ namespace OOPExercise.Animals
     {
         public bool CanFly { get; set; }
         public Bird() { }
+
+        public override void DoSound()
+        {
+            Console.WriteLine("The bird tweets.");
+        }
     }
 }

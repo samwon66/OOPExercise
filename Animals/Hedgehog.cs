@@ -10,5 +10,9 @@ namespace OOPExercise.Animals
     {
         public int NrOfSpikes { get; set; }
         public Hedgehog() { }
+        public override void DoSound()
+        {
+            Console.WriteLine("The hedgehog purrs.");
+        }
     }
 }

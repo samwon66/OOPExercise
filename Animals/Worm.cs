@@ -10,5 +10,10 @@ namespace OOPExercise.Animals
     {
         public bool CanDig {  get; set; }
         public Worm() { }
+        public override void DoSound()
+        {
+            Console.WriteLine("The worm sounds nothing.");
+        }
+
     }
 }

@@ -10,5 +10,9 @@ namespace OOPExercise.Animals
     {
         public bool CanRide { get; set; }
         public Horse() { }
+        public override void DoSound()
+        {
+            Console.WriteLine("The horse make a neigh.");
+        }
     }
 }

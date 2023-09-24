@@ -10,5 +10,10 @@ namespace OOPExercise.Animals
     { 
         public bool HumanFriendly { get; set; }
         public Dog() { }
+
+        public override void DoSound()
+        {
+            Console.WriteLine("The dog barks");
+        }
     }
 }
