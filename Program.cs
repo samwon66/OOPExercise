@@ -24,9 +24,24 @@
             //    Console.WriteLine(ex.Message);
             //}
 
-            PersonHandler handler = new PersonHandler();
-            handler.CreatePerson(70, "Joe", "Biden", 1.80, 87.5);
+            //PersonHandler handler = new PersonHandler();
+            //Person jb = handler.CreatePerson(70, "Joe", "Biden", 1.80, 87.5);
+            //Person aw = handler.CreatePerson(50, "Anna", "Watson", 1.67, 77.5);
+            //handler.PrintPerson(jb);
+            //handler.PrintPerson(aw);
 
+            List<UserError> errors = new List<UserError>();
+
+            var numericError = new NumericInputError();
+            var textError = new TextInputError();
+
+            errors.Add(numericError);
+            errors.Add(textError);
+
+            foreach ( var error in errors ) 
+            {
+                Console.WriteLine(error.UEMessage());
+            }
 
         }
     }

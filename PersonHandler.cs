@@ -25,10 +25,9 @@ namespace OOPExercise
             return person;
         }
 
-        public string PrintPerson(int age, string fname, string lname, double height, double weight) 
+        public string PrintPerson(Person pers)
         {
-            Person person = CreatePerson(age, fname, lname, height, weight);
-            return $"Förnamn: {person.FName}\nEfternamn: {person.LName}\nÅlder: {person.Age}\nLängd: {person.Height}\nVikt: {person.Weight}";
+            return $"Förnamn: {pers.FName}\nEfternamn: {pers.LName}\nÅlder: {pers.Age}\nLängd: {pers.Height}\nVikt: {pers.Weight}";
         }
 
     }
