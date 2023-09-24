@@ -55,17 +55,29 @@ namespace OOPExercise
             }
 
 
-            //Create a list of animals, add 3 different kinds of animal in the list and print out the properties of the animals.
+            //Create a list of animals, add 3 different kinds of animal in the list. 
             List<Animal> animals = new List<Animal>()
             {
                 new Dog { Name = "Bobby", Age = 3, Weight = 18.1, HumanFriendly = true },
                 new Worm { Name = "Wommy", Age= 1, Weight = 0.01, CanDig = true},
-                new Swan {Name = "Anne", Age = 2, Weight = 1.4, CanFly = true, CanSwim = true}
+                new Swan {Name = "Anne", Age = 2, Weight = 1.4, CanFly = true, CanSwim = true},
+                new Wolfman {Name = "Woffy", Age = 24, Weight = 66.4, IsDangerous = true }
             };
 
+            //Print out the properties of the animal and make some noise.
             foreach ( var animal in animals)
             {
                 animal.Stats();
+                animal.DoSound();
+            }
+
+            //Check there is a wolfman in the list. If yes, wolfman makes some noise.
+            foreach ( var animal in animals)
+            {
+                if (animal is Wolfman wolfman)
+                {
+                    wolfman.Talk();
+                }
             }
 
 
