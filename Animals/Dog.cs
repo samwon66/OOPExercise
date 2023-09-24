@@ -20,5 +20,10 @@ namespace OOPExercise.Animals
         {
             return $"Name: {Name}, age: {Age}, weight: {Weight}, humanfriendly: {HumanFriendly}";
         }
+
+        public string OnlyDog()
+        {
+            return "This is only for the dogs.";
+        }
     }
 }
