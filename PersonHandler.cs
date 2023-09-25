@@ -27,7 +27,7 @@ namespace OOPExercise
 
         public string PrintPerson(Person pers)
         {
-            return $"Förnamn: {pers.FName}\nEfternamn: {pers.LName}\nÅlder: {pers.Age}\nLängd: {pers.Height}\nVikt: {pers.Weight}";
+            return $"Forname: {pers.FName}\nLastname: {pers.LName}\nAge: {pers.Age}\nHeight: {pers.Height}\nWeight: {pers.Weight}";
         }
 
     }

@@ -39,7 +39,7 @@ namespace OOPExercise
             
             if (age <= minimum)
             {
-                throw new ArgumentException($"Ålder måste vara större än {minimum}.");
+                throw new ArgumentException($"Age have to been greater than {minimum}.");
             }
         }
 
@@ -48,7 +48,7 @@ namespace OOPExercise
         {
             if (String.IsNullOrWhiteSpace(name))
             {
-                throw new ArgumentException("Namnet får inte vara tomt.");
+                throw new ArgumentException("Name can not be empty.");
             }
         }
 
@@ -57,7 +57,7 @@ namespace OOPExercise
         {
             if (name.Length < lowest || name.Length > highest)
             {
-                throw new ArgumentException($"Namnet måste vara längre än {lowest} eller kortare {highest}.");
+                throw new ArgumentException($"The name has to been more than {lowest} or shorter than {highest}.");
             }
         }
 
@@ -65,7 +65,7 @@ namespace OOPExercise
         //Override ToString to print out all properties of the class.
         public override string ToString()
         {
-            return $"Förnamn: {FName}\nEfternamn: {LName}\nÅlder: {Age}\nLängd: {Height}\nVikt: {Weight}";
+            return $"Forname: {FName}\nLastname: {LName}\nAge: {Age}\nHeight: {Height}\nWeight: {Weight}";
         }
 
 
